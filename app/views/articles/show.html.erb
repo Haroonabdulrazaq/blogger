@@ -7,5 +7,5 @@
 <%= link_to "delete", article_path, method: :delete, data: {confirm: "Really delete the article?"}%>
 <%= link_to "Edit", edit_article_path(@article)  %>
 
-<h3>Comments</h3>
+<h3><%=@article.comments.size%> Comments</h3>
 <%= render partial: 'articles/comment', collection: @article.comments %>
